@@ -4,9 +4,7 @@ FROM php:8.2-apache as web
 # Install Additional System Dependencies
 RUN apt-get update && apt-get install -y \
     libzip-dev \
-    zip \
-    php-xml \
-    php-sqlite3
+    zip
 
 # Clear cache
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
